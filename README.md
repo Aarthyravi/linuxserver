@@ -103,3 +103,27 @@
             LogLevel warn
             CustomLog ${APACHE_LOG_DIR}/access.log combined
          </VirtualHost>   
+   - Enable the virtual host sudo a2ensite catalog   
+ # Install and configure PostgreSQL
+   * sudo apt-get install libpq-dev python-dev
+   * sudo apt-get install postgresql postgresql-contrib
+   * sudo su - postgres
+   * psql
+   * CREATE USER catalog WITH PASSWORD 'password';
+   * ALTER USER catalog CREATEDB;
+CREATE DATABASE catalog WITH OWNER catalog;
+\c catalog
+REVOKE ALL ON SCHEMA public FROM public;
+GRANT ALL ON SCHEMA public TO catalog;
+\q
+exit
+Change create engine line in your __init__.py and database_setup.py to: engine = create_engine('postgresql://catalog:password@localhost/catalog')
+python /var/www/catalog/catalog/database_setup.py
+Make sure no remote connections to the database are allowed. Check if the contents of this file sudo nano /etc/postgresql/9.3/main/pg_hba.conf looks like this:
+local   all             postgres                                peer
+local   all             all                                     peer
+host    all             all             127.0.0.1/32            md5
+host    all             all             ::1/128                 md5
+Restart Apache
+sudo service apache2 restart
+Visit site at http://35.167.27.204  
