@@ -71,12 +71,12 @@
           application.secret_key = 'supersecretkey'
     * Rename finalproject.py to init.py mv finalproject.py __init__.py  
  # Install virtual environment
-    - Install the virtual environment sudo pip install virtualenv
-    - Create a new virtual environment with sudo virtualenv venv
-    - Activate the virutal environment source venv/bin/activate
-    - Change permissions sudo chmod -R 777 venv 
+   - Install the virtual environment sudo pip install virtualenv
+   - Create a new virtual environment with sudo virtualenv venv
+   - Activate the virutal environment source venv/bin/activate
+   - Change permissions sudo chmod -R 777 venv 
  # Install Flask and other dependencies
-    - Install pip with sudo apt-get install python-pip
-    - Install Flask pip install Flask
-    - Install other project dependencies sudo pip install httplib2 oauth2client sqlalchemy psycopg2 sqlalchemy_utils   
+   - Install pip with sudo apt-get install python-pip
+   - Install Flask sudo pip install Flask
+   - Install other project dependencies sudo pip install httplib2 oauth2client sqlalchemy psycopg2 sqlalchemy_utils   
     
