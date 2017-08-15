@@ -61,7 +61,6 @@
    * cd /catalog
    * Clone your project from github git clone https://github.com/Aarthyravi/Item-catalog.git catalog
    * Create a catalog.wsgi file, then add this inside:
-        
         import sys
         import logging
         logging.basicConfig(stream=sys.stderr)
