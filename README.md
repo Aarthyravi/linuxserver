@@ -54,13 +54,13 @@
        - Enable mod_wsgi
    * Start the web server with sudo service apache2 start
  # Clone the Item Catalog app from Github 
-   *install git using: sudo apt-get install git
-   *cd /var/www
-   *sudo mkdir catalog
-   *Change owner of the newly created catalog folder sudo chown -R grader:grader catalog
-   *cd /catalog
-   *Clone your project from github git clone https://github.com/Aarthyravi/Item-catalog.git catalog
-   *Create a catalog.wsgi file, then add this inside:
+   * install git using: sudo apt-get install git
+   * cd /var/www
+   * sudo mkdir catalog
+   * Change owner of the newly created catalog folder sudo chown -R grader:grader catalog
+   * cd /catalog
+   * Clone your project from github git clone https://github.com/Aarthyravi/Item-catalog.git catalog
+   * Create a catalog.wsgi file, then add this inside:
        
           import sys
           import logging
