@@ -130,3 +130,4 @@
    * Restart Apache
        - sudo service apache2 restart
    * Visit site at http://34.230.84.216  
+       - you will see your Restaurant Webpage
