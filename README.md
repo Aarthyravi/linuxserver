@@ -61,10 +61,10 @@
    * cd /catalog
    * Clone your project from github git clone https://github.com/Aarthyravi/Item-catalog.git catalog
    * Create a catalog.wsgi file, then add this inside:
-        import sys
-        import logging
-        logging.basicConfig(stream=sys.stderr)
-        sys.path.insert(0, "/var/www/catalog/")
-
-        from catalog import app as application
-        application.secret_key = 'supersecretkey'
+      import sys
+      import logging
+      logging.basicConfig(stream=sys.stderr)
+      sys.path.insert(0, "/var/www/catalog/")
+      
+      from catalog import app as application
+      application.secret_key = 'supersecretkey'
