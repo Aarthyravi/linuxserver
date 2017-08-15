@@ -38,13 +38,10 @@
    * sudo ufw allow 123/udp
    * sudo ufw enable
    * sudo ufw status
-   
-   Status: active
-
-To                         Action      From
---                         ------      ----
-2200/tcp                   ALLOW       Anywhere
-80/tcp                     ALLOW       Anywhere
+       - Status: active
+        - To                         Action      From
+        - 2200/tcp                   ALLOW       Anywhere
+        - 80/tcp                     ALLOW       Anywhere
 123/udp                    ALLOW       Anywhere
 2222/tcp                   ALLOW       Anywhere
 2200/tcp (v6)              ALLOW       Anywhere (v6)
