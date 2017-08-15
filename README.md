@@ -131,3 +131,10 @@
        - sudo service apache2 restart
    * Visit site at http://34.230.84.216  
        - you will see your Restaurant Webpage
+ # Oauth Login
+   * Google Authorization steps: 
+      - Go to console.developer
+      - click on Item-catalog Credentails --> edit
+      - add you hostname (http://ec2-34-230-84-216.compute-1.amazonaws.com ) and public IP address (http://34.230.84.216) to                      Authorized JavaScript origins.
+      - add hostname (http://ec2-34-230-84-216.compute-1.amazonaws.com/login and ec2-34-230-84-216.compute-1.amazonaws.com/gconnect) to           Authorised redirect URIs.
+      - update the client_secret.json file too(adding hostname and public IP address).
