@@ -5,8 +5,8 @@
    * SSH Port : 2200
    * Login with : $ ssh -i ~/.ssh/privatekey.pem -p 2200 grader@34.230.84.216
  # Get started on Lightsail
-    Login to LightSail:
-      * If you don't already have an Amazon Web Services account, you'll be prompted to create one.
+  Login to LightSail:
+   * If you don't already have an Amazon Web Services account, you'll be prompted to create one.
       * Create an instance
         - When You create an instance,LightSail asks what kind you want. For this project,choose an "OS Only" instance with Ubuntu.
       * Choose your instance plan
