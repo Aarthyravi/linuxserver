@@ -46,6 +46,26 @@
    * Run this command cp /ubuntu/.ssh/authorized_keys /home/grader/.ssh/authorized_keys 
    * Now you are only able to login using ssh -i ~/.ssh/privatekey.pem -p 2200 grader@34.230.84.216
  # Install Apache
-   * sudo apt-get install apache2
+   * Run sudo apt-get install apache2
     - In this Stage, we can see the apache2 default page in http://34.230.84.216/
- 
+ # Install mod_wsgi
+   * Run sudo apt-get install libapache2-mod-wsgi python-dev
+   * Run sudo a2enmod wsgi
+       - Enable mod_wsgi
+   * Start the web server with sudo service apache2 start
+ # Clone the Item Catalog app from Github 
+   * install git using: sudo apt-get install git
+   * cd /var/www
+   * sudo mkdir catalog
+   * Change owner of the newly created catalog folder sudo chown -R grader:grader catalog
+   * cd /catalog
+   * Clone your project from github git clone https://github.com/Aarthyravi/Item-catalog.git catalog
+   * Create a catalog.wsgi file, then add this inside:
+        
+        import sys
+        import logging
+        logging.basicConfig(stream=sys.stderr)
+        sys.path.insert(0, "/var/www/catalog/")
+
+        from catalog import app as application
+        application.secret_key = 'supersecretkey'
