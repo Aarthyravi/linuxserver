@@ -47,5 +47,5 @@
    * Now you are only able to login using ssh -i ~/.ssh/privatekey.pem -p 2200 grader@34.230.84.216
  # Install Apache
    * sudo apt-get install apache2
-    - In this Stage, we can see the apache2 default page in http://http://34.230.84.216/
+    - In this Stage, we can see the apache2 default page in http://34.230.84.216/
  
