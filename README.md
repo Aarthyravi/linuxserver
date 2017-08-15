@@ -79,4 +79,27 @@
    - Install pip with   ----> sudo apt-get install python-pip
    - Install Flask      ----> sudo pip install Flask
    - Install other project dependencies ----> sudo pip install httplib2 oauth2client sqlalchemy psycopg2 sqlalchemy_utils   
-    
+ # Configure and enable a new virtual host
+   - Run this: sudo nano /etc/apache2/sites-available/catalog.conf
+   - Paste this code:
+         
+         <VirtualHost *:80>
+             ServerName 34.230.84.216
+             ServerAlias ec2-34-230-84-216.compute-1.amazonaws.com
+             ServerAdmin admin@34.230.84.216
+             WSGIDaemonProcess catalog python-path=/var/www/catalog:/var/www/catalog/venv/lib/python2.7/site-packages
+             WSGIProcessGroup catalog
+             WSGIScriptAlias / /var/www/catalog/catalog.wsgi
+            <Directory /var/www/catalog/catalog/>
+                Order allow,deny
+                Allow from all
+            </Directory>
+            Alias /static /var/www/catalog/catalog/static
+            <Directory /var/www/catalog/catalog/static/>
+                Order allow,deny
+                Allow from all
+            </Directory>
+            ErrorLog ${APACHE_LOG_DIR}/error.log
+            LogLevel warn
+            CustomLog ${APACHE_LOG_DIR}/access.log combined
+         </VirtualHost>   
