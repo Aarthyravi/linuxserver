@@ -135,6 +135,13 @@
    * Google Authorization steps: 
       - Go to https://console.developers.google.com
       - click on Item-catalog Credentails --> edit
-      - add you hostname (http://ec2-34-230-84-216.compute-1.amazonaws.com ) and public IP address (http://34.230.84.216) to                      Authorized JavaScript origins.
-      - add hostname (http://ec2-34-230-84-216.compute-1.amazonaws.com/login and ec2-34-230-84-216.compute-1.amazonaws.com/gconnect) to           Authorized redirect URIs.
+      - add you hostname (http://ec2-34-230-84-216.compute-1.amazonaws.com ) and 
+        public IP address (http://34.230.84.216) to Authorized JavaScript origins.
+      - add hostname (http://ec2-34-230-84-216.compute-1.amazonaws.com/login) and 
+        (http://ec2-34-230-84-216.compute-1.amazonaws.com/gconnect) to Authorized redirect URIs.
       - update the client_secret.json file too(adding hostname and public IP address).
+  * Facebook Authorization steps:
+     - Go to https://developers.facebook.com/
+     - open your app and click on Facebook Login --> settings.
+     - Add hostname and public IP address to Valid OAuth redirect URIs and save it.
+     - update the fb_client_secret.json file too.     
