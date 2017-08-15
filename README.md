@@ -39,6 +39,13 @@
    * sudo ufw enable
    * sudo ufw status
        - Status: active
+ # Configure the local timezone to UTC
+   * Run sudo dpkg-reconfigure tzdata,
+     - Choose US in Geographic area, then choose Pacific ocean in Time Zone.
+ # Configure key-based authentication for grader user
+   * Run this command cp /ubuntu/.ssh/authorized_keys /home/grader/.ssh/authorized_keys 
+   * Now you are only able to login using ssh -i ~/.ssh/privatekey.pem -p 2200 grader@34.230.84.216
+     
          
 
    
