@@ -17,17 +17,17 @@
       * SSh window logged into the server instance
         - Ubuntu@ip-xxx-xx-xx-xxx:~$
  # How to get private key :
-    * Go to https://lightsail.aws.amazon.com/ls/webapp/account/keys ,then click download button. 
+   * Go to https://lightsail.aws.amazon.com/ls/webapp/account/keys ,then click download button. 
        - I have stored this privatekey under .ssh folder (C:\Users\Ravi\.ssh\privatekey.pem) 
  # Create new user named grader and give it the permission to sudo
-    * SSH into the server through --> ssh -i ~/.ssh/privatekey.pem ubuntu@34.230.84.216
-    * Run $ sudo adduser grader to create a new user named grader
+   * SSH into the server through --> ssh -i ~/.ssh/privatekey.pem ubuntu@34.230.84.216
+   * Run $ sudo adduser grader to create a new user named grader
         - ubuntu@ip-xxx-xx-xx-xxx:~$ sudo adduser grader
-    * Create a new file in the sudoers directory with sudo nano /etc/sudoers.d/grader
+   * Create a new file in the sudoers directory with sudo nano /etc/sudoers.d/grader
         - Add the following text grader ALL=(ALL:ALL) ALL   
  # Update all currently installed packages
-    * sudo apt-get update - command will update list of packages and their versions on your machine.
-    * sudo apt-get upgrade - command will install the packages
+   * sudo apt-get update - command will update list of packages and their versions on your machine.
+   * sudo apt-get upgrade - command will install the packages
  # Add SSH port 
    * Run sudo nano /etc/ssh/sshd_config
       - If I have Changed the port from 22 to 2200, I couldn't enter the server later.
